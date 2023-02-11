@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <style>
+        #col3 {
+            margin-top: 250px;
+        }
+        
+        .img1 {
+            width: 100%;
+        }
+        
+        .carouselExampleIndicators {
+            width: 100%;
+            height: 350px;
+        }
+        
+        #bluebtn {
+            background-color: orange;
+        }
+        
+        #navbarNav {
+            margin-left: 650px;
+        }
+        
+        .nav-link {
+            margin-left: 20px;
+            margin-right: 20px;
+            display: 1111111;
+        }
+        
+        .navbar-brand {
+            margin-left: 15px;
+            color: white;
+            font-family: 'Staatliches', cursive;
+        }
+        
+        .log {
+            color: orange;
+            margin-right: 5px;
+            font-size: 20px;
+        }
+        
+        .card-body {
+            align-items: center;
+            align-content: center;
+        }
+        
+        .container1 {
+            width: 100%;
+            height: 450px;
+            border: 3px dotted orange;
+            border-radius: 45px;
+            background-image: url(https://1.bp.blogspot.com/-louD26DP9Mk/YNUISNTJspI/AAAAAAAA2_4/3-7lVfPCvh8zG6rlTe69Aw1fA2bw_hxzQCLcBGAsYHQ/s0/noname.png);
+        }
+        
+        .nav-link {
+            color: orange;
+        }
+        
+        .icon-bar {
+            position: fixed;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        /* Style the icon bar links */
+        
+        .icon-bar a {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 20px;
+        }
+        /* Style the social media icons with color, if you want */
+        
+        .icon-bar a:hover {
+            background-color: #000;
+        }
+        
+        .facebook {
+            background: #3B5998;
+            color: white;
+        }
+        
+        .twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        
+        .google {
+            background: #dd4b39;
+            color: white;
+        }
+        
+        .linkedin {
+            background: #007bb5;
+            color: white;
+        }
+        
+        .youtube {
+            background: #bb0000;
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy meal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-------- part of nav-bar-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <ion-icon name="restaurant-outline" class="log"></ion-icon>Happy Meal</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+
+
+
+
+                    <!-------- Food button -->
+                    <li class="nav-item">
+                        <select name="ap" class="nav-link" style="border: 1px solid orange;border-radius: 25px; color: black; padding-right: 10px;padding-left: 10px; margin: 10px;">
+            <option>Food</option>
+          </select>
+
+                        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+                        <script>
+                            const $select = $('select[name="ap"]');
+                            const opts = [{
+                                'value': 'KFC_food.html',
+                                'text': 'KFC'
+                            }, {
+                                'value': 'Mac_food.html',
+                                'text': 'Macdonald'
+                            }, {
+                                'value': 'Pizza_Food.html',
+                                'text': 'Pizza'
+
+                            }];
+
+
+                            opts.forEach(function(obj) {
+                                $("<option />", {
+                                    value: obj.value,
+                                    text: obj.text
+                                }).appendTo($select)
+                            });
+
+                            $select.on("change", function() {
+                                window.location = this.value;
+                            });
+                        </script>
+                    </li>
+
+                    <!-------- Drinks & Sweets button -->
+                    <li class="nav-item">
+                        <select name="ap2" class="nav-link" style="border: 1px solid orange;border-radius: 25px; color: black; padding-right: 10px;padding-left: 10px; margin: 10px;">
+            <option>Drinks & Sweets</option>
+          </select>
+                        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+                        <script>
+                            const $select2 = $('select[name="ap2"]');
+                            const opts2 = [{
+                                'value': 'Hot_Drinks.html',
+                                'text': 'Hot Drinks'
+                            }, {
+                                'value': 'Cool_Drink.html',
+                                'text': 'Cool Drinks'
+                            }, {
+                                'value': 'Sweets.html',
+                                'text': ' Sweets'
+                            }];
+
+                            opts2.forEach(function(obj2) {
+                                $("<option />", {
+                                    value: obj2.value,
+                                    text: obj2.text
+                                }).appendTo($select2)
+                            });
+
+                            $select2.on("change", function() {
+                                window.location = this.value;
+                            });
+                        </script>
+                    </li>
+
+                    <!-------- home button -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Users/hm875/OneDrive/Desktop/lefta%20web/hamd.html" style="border: 1px solid orange;border-radius: 25px;padding-right: 10px;padding-left: 10px;color: black;margin: 10px; text-align: center ; width: 100px;">Profile</a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-------- floating left nav bar -->
+    <div class="icon-bar ">
+        <a href="https://www.facebook.com/ " class="facebook "><i class="fa fa-facebook "></i></a>
+        <a href="https://twitter.com/i/flow/login " class="twitter "><i class="fa fa-twitter "></i></a>
+        <a href="https://mail.google.com/mail/u/0/#inbox " class="google "><i class="fa fa-google "></i></a>
+        <a href="https://www.linkedin.com/login/ar " class="linkedin "><i class="fa fa-linkedin "></i></a>
+        <a href="https://www.youtube.com/ " class="youtube "><i class="fa fa-youtube "></i></a>
+    </div>
+    <!----------- welcome image in the website -->
+    <div class="card mb-3 ">
+        <img src="https://1.bp.blogspot.com/-OBXRtBmK6D8/YNUAX8mFIOI/AAAAAAAA2_Y/-atvwniLl6IuGj9dXqXXncXXtlDjGeLjwCLcBGAsYHQ/s0/welcome.jpg " style="height: 450px; " class="card-img-top " alt="... ">
+        <div class="card-body ">
+            <h5 class="card-title " style="vertical-align: middle;margin-left: 190px;color: orange; ">============================= " Happy Meal " =============================</h5>
+            <p class="card-text ">One of the Best Restaurants in Cairo , Alexandria and Giza. Wishing to visite us one day !
+            </p>
+            <p class="card-text "><small class="text-muted ">Main branch in Alexandria</small></p>
+        </div>
+    </div>
+    <!-------------- Attention section   --------->
+    <div class="row row-cols-1 row-cols-md-3 g-4 ">
+        <div class="col ">
+            <div class="card ">
+                <img src="https://1.bp.blogspot.com/-9kNH4hIV730/YNUDih1oc8I/AAAAAAAA2_w/SPnNvDdiLgs_H59U4JbNwvC170msj604gCLcBGAsYHQ/s0/pexels-pixabay-511763.jpg " class="card-img-top " style="height: 250px;" alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Special dishes from the whole world</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col ">
+            <div class="card ">
+                <img src="https://1.bp.blogspot.com/-ugXBidFycVg/YNUDPgP3S9I/AAAAAAAA2_o/Td4XEG0J760mAvAbvFLU5dM2ChAXB_zZgCLcBGAsYHQ/s0/pexels-energepiccom-110472.jpg " class="card-img-top " style="height: 250px;" alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">The most delicious beverages ever</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col ">
+            <div class="card ">
+                <img src="https://1.bp.blogspot.com/-ktHGirYtD8c/YNUCldWIW9I/AAAAAAAA2_g/Alzho9DxmUM9cWF85SUdk6HEDYvHE9M-ACLcBGAsYHQ/s0/pexels-andrea-piacquadio-3937468%2B%25282%2529.jpg " class="card-img-top " style="height: 250px;" alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Nice time with family or friends</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------- pizza section ------------->
+    <div class="container1 " style="margin-top: 20px;">
+        <div class="container ">
+            <div class="row ">
+                <div class="col align-self-start " id="col1 ">
+                    <div class="card " style="margin-top: 25px;">
+                        <img src="https://1.bp.blogspot.com/-gFejFp2VKi4/YNR_iTtVYQI/AAAAAAAA2-E/oXVWz4h0Y5ownhTqH8J_CXy6dqCye6oZwCLcBGAsYHQ/s0/pexels-kristina-paukshtite-1146760.jpg " class="card-img-top " alt="... " />
+                        <div class="card-body ">
+                            <h5 class="card-title ">"Maregrita "</h5>
+                            <p class="card-text ">One of the most popular Dishes in italy.</p>
+                            <a href="# " class="btn btn-primary " id="bluebtn " class="bluebtn ">try now ==> 11.99$</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col align-self-center " id="col2 ">
+                    <div class="card " style="margin-top: 25px;">
+                        <img src="https://1.bp.blogspot.com/-yggeVC4E1LM/YNR-tRQqtVI/AAAAAAAA290/8o4oKr24x_Y31VgJQo9q4OooBVLbC3AIgCLcBGAsYHQ/s0/pexels-edward-eyer-1049620.jpg " class="card-img-top " alt="... " />
+                        <div class="card-body ">
+                            <h5 class="card-title ">"Detroit "</h5>
+                            <p class="card-text ">Do good,Be nice,Order Detroit pizza.</p>
+                            <a href="# " class="btn btn-primary " id="bluebtn " class="bluebtn ">try now ==> 14.99$</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col align-self-end " id="col3 ">
+                    <div class="card " style="margin-top: 25px;">
+                        <img src="https://1.bp.blogspot.com/-zVTFTsu02nE/YNR-ZtyDEfI/AAAAAAAA29s/3_ZG3_ZjzWo9qEzrpeeGYeCXZKA9ch0qQCLcBGAsYHQ/s0/pexels-engin-akyurt-1435900.jpg " class="card-img-top " alt="... " />
+                        <div class="card-body ">
+                            <h5 class="card-title ">"Greek pizza "</h5>
+                            <p class="card-text ">Friends and Greek are all we want.</p>
+                            <a href="# " class="btn btn-primary " id="bluebtn " class="bluebtn ">try now ==> 12.99$</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------- Zones section ----------->
+    <div class="row row-cols-1 row-cols-md-2 g-4 ">
+        <div class="col ">
+            <div class="card " style="border: 1px solid orange;margin-bottom: 25px;margin-top: 25px;  height: 520px;  ">
+                <img src="https://1.bp.blogspot.com/-86j0s0O5WT0/YNUteXQwGcI/AAAAAAAA3Ag/JHmwSkZp0PI9KTED0KOcARRCS6XWOVo_wCLcBGAsYHQ/s320/pexels-andrea-piacquadio-3756353.jpg " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Couples Area</h5>
+                    <p class="card-text ">Share your favourite meal with who you love and make the moment more pretty.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col ">
+            <div class="card " style="border: 1px solid orange;margin-bottom: 25px;margin-top: 25px; height: 520px; ">
+                <img src="https://1.bp.blogspot.com/-Sp9LbXpmcuA/YNUyBJJYdFI/AAAAAAAA3A8/8qlLvkXPnJ026OF79fc45zJYfzSvDMY0QCLcBGAsYHQ/s320/pexels-eren-li-7169308.jpg " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Kids Area</h5>
+                    <p class="card-text "> we can't forget your children from having Funny moments too .. Make them do different activities.. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col ">
+            <div class="card " style="border: 1px solid orange;margin-bottom: 25px;margin-top: 25px; height: 520px; ">
+                <img src="https://1.bp.blogspot.com/-e7LrFRZkhtE/YNUvlEKRoXI/AAAAAAAA3Aw/brH3jnpHMJcoM0vqizFOgRDQmBcLL4otwCLcBGAsYHQ/s320/pexels-max-vakhtbovych-6438746.jpg " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Bussiness Area</h5>
+                    <p class="card-text ">To have your working lunch or dinner in suitable atmosphere.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col ">
+            <div class="card " style="border: 1px solid orange;margin-bottom: 25px;margin-top: 25px; height: 520px; ">
+                <img src="https://1.bp.blogspot.com/-jMfGMXANYHs/YNUxyLUjpyI/AAAAAAAA3A4/u12GYzpqsMcAiaHuTJd4WlrQiT1VbCOwACLcBGAsYHQ/s320/pexels-angela-roma-7363751.jpg " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Family Area</h5>
+                    <p class="card-text ">To spend happy family time.....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
+</body>
+
+</html>
